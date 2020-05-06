@@ -1,0 +1,17 @@
+{
+	"name": "diycode",
+	"version": "0.2.0",
+	"description": "",
+	"main": "lib/index.js",
+	"unpkg": "dist/index.js",
+	"types": "types/index.d.ts",
+	"scripts": {
+		"build": "rimraf dist && tsc && poi --prod --config config/build.js",
+		"dev": "poi --serve --config config/watch.js"
+	},
+	"author": "shawroger",
+	"license": "ISC",
+	"devDependencies": {
+		"poi": "^12.8.0"
+	}
+}
