@@ -1,4 +1,1 @@
-export declare const encode: (
-	input: string,
-	format: string | string[]
-) => string;
+export declare const encode: (input: string, format: string | string[]) => string;

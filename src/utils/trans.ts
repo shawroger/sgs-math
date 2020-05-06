@@ -8,19 +8,25 @@ export const N_10 = (val: number | bigint, from: number) =>
 		.reduce((prev, curr) => curr + prev, 0);
 
 export const n10_N = (val: number | bigint, to: number | bigint) => {
-    
-    const result: bigint[] = [];
-    val = BigInt(val);
-    to = BigInt(to);
+	const result: bigint[] = [];
+	val = BigInt(val);
+	to = BigInt(to);
 
 	while (true) {
 		result.push(val % to);
-        val = (val - (val % to)) / to;
-        if(val < to) {
-            result.push(val % to);
-            break;
-        }
+		val = (val - (val % to)) / to;
+		if (val < to) {
+			result.push(val % to);
+			break;
+		}
 	}
-	return result.reverse().map(val => Number(val));
-};
 
+	for (let i = result.length - 1; i >= 0; i--) {
+		if (Number(result[i]) === 0) {
+			result.pop();
+		} else {
+			break;
+		}
+	}
+	return result.reverse().map((val) => Number(val));
+};
