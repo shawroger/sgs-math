@@ -28,3 +28,11 @@ export const decode = (input: string, format: string | string[]) =>
 			.map((val) => ALL_CODE.find((e) => Number(e.val) === val)?.char ?? "")
 			.join("")
 	);
+
+export function tryDecode(input: string, format: string | string[]) {
+	try {
+		return decode(input, format);
+	} catch (e) {
+		return null;
+	}
+}

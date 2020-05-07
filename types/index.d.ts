@@ -1,3 +1,3 @@
 export { encode } from "./encode";
-export { decode } from "./decode";
+export { decode, tryDecode } from "./decode";
 export { n10_N, N_10 } from "./utils/trans";

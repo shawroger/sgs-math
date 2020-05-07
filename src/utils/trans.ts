@@ -8,9 +8,9 @@ export const N_10 = (val: number | bigint, from: number) =>
 		.reduce((prev, curr) => curr + prev, 0);
 
 export const n10_N = (val: number | bigint, to: number | bigint) => {
-	const result: bigint[] = [];
-	val = BigInt(val);
 	to = BigInt(to);
+	val = BigInt(val);
+	const result: bigint[] = [];
 
 	while (true) {
 		result.push(val % to);
@@ -24,6 +24,7 @@ export const n10_N = (val: number | bigint, to: number | bigint) => {
 	for (let i = result.length - 1; i >= 0; i--) {
 		if (Number(result[i]) === 0) {
 			result.pop();
+			continue;
 		} else {
 			break;
 		}

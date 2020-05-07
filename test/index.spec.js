@@ -24,11 +24,9 @@ describe("进制转换测试", function () {
 	});
 
 	it("字符串编码译码测试", function () {
-		const Format = "QWERTYUIOSDFGHJXCVBNM";
+		const Format = "QWERTYUIOP";
 		Array(20)
-			.fill(Math.floor(Math.random() * Date.now()))
-			.forEach((v) =>
-				expect(decode(encode(v, Format), Format)).toEqual(String(v))
-			);
+			.fill(String(Math.random() * Date.now()))
+			.forEach((v) => expect(decode(encode(v, Format), Format)).toEqual(v));
 	});
 });
