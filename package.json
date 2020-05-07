@@ -1,6 +1,6 @@
 {
 	"name": "diycode",
-	"version": "0.3.0",
+	"version": "0.3.2",
 	"description": "一个非常简单的字符串编码工具",
 	"main": "dist/index.js",
 	"unpkg": "dist/index.js",

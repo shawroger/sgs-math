@@ -20,7 +20,7 @@ npm install diycode --save
 
 # API
 
-Diycode 提供了四个简单的函数工具
+Diycode 提供了 5 个简单的函数工具
 
 ## encode
 
@@ -45,6 +45,17 @@ export declare const decode: (
 可以将编码后的字符串依据特定编码字符(数组)转化成未编码的字符
 
 另外两个工具函数提供了`将任意进制数转化成十进制`和`将十进制数转化成任意进制`的函数。
+
+## tryDecode
+
+```ts
+export declare const tryDecode: (
+	input: string,
+	format: string | string[]
+) => string | null;
+```
+
+防止在`decode`函数解码错误时报错，可以改用`tryDecode`函数，在解码错误的时候返回`null`。
 
 ## N_10
 
