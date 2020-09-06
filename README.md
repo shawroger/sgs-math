@@ -1,77 +1,43 @@
-# Diycode
+# 三国杀数学计算库
 
-Diycode 是一个非常简单的字符串编码工具，它可以将任意的字符串转化成有特定字符编码的字符串，并且能做到一一对应的编码译码。
+三国杀数学计算目前包含了张昌蒲和糜竺的技能计算。
 
-# 使用
+库 API 很简单，在浏览器里即可计算。
 
-##
+# 计算库
 
-使用 npm 安装
-
-```bash
-npm install diycode --save
-```
-
-在浏览器中使用
-
-```html
-<script src="https://unpkg.com/diycode/dist/index.js"></script>
-```
-
-# API
-
-Diycode 提供了 5 个简单的函数工具
-
-## encode
+## 张昌蒲 · 严教
 
 ```ts
-export declare const encode: (
-	input: string,
-	format: string | string[]
-) => string;
+import { ZCP } from "sgs-math";
+const cards = [1, 3, 4, 6];
+const result = ZCP.calc(cards);
+// result为计算结果
 ```
-
-可以将指定的字符串转化成由特定编码字符(数组)构成的字符串。
-
-## decode
 
 ```ts
-export declare const decode: (
-	input: string,
-	format: string | string[]
-) => string;
+//浏览器端引入
+const cards = [1, 3, 4, 6];
+const result = sgsMath.ZCP.calc(cards);
+// result为计算结果
 ```
 
-可以将编码后的字符串依据特定编码字符(数组)转化成未编码的字符
-
-另外两个工具函数提供了`将任意进制数转化成十进制`和`将十进制数转化成任意进制`的函数。
-
-## tryDecode
+## 糜竺 · 资援
 
 ```ts
-export declare const tryDecode: (
-	input: string,
-	format: string | string[]
-) => string | null;
+import { Mizhu } from "sgs-math";
+const cards = [1, 3, 4, 6, 7, 8];
+const result = Mizhu.calc(cards);
+// result为计算结果
 ```
-
-防止在`decode`函数解码错误时报错，可以改用`tryDecode`函数，在解码错误的时候返回`null`。
-
-## N_10
 
 ```ts
-export declare const N_10: (val: number | bigint, from: number) => number;
+//浏览器端引入
+const cards = [1, 3, 4, 6, 7, 8];
+const result = sgsMath.Mizhu.calc(cards);
+// result为计算结果
 ```
 
-将任意进制数转化成十进制
+# 小工具
 
-## n10_N
-
-```ts
-export declare const n10_N: (
-	val: number | bigint,
-	to: number | bigint
-) => number[];
-```
-
-将十进制数转化成任意进制数
+计算库中还包含 `utils` 包，可以用来进行其他计算，详情在 `types` 中有注释。

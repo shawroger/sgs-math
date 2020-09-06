@@ -1,24 +1,17 @@
 {
-	"name": "diycode",
-	"version": "0.3.2",
-	"description": "一个非常简单的字符串编码工具",
+	"name": "sgs-math",
+	"version": "0.0.1",
+	"description": "三国杀数学计算 JavaScript 库",
 	"main": "dist/index.js",
 	"unpkg": "dist/index.js",
 	"types": "types/index.d.ts",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/shawroger/diycode.git"
-	},
-	"homepage": "https://github.com/shawroger/diycode#README.md",
 	"scripts": {
 		"build": "rimraf dist && tsc && poi --prod --config config/build.js",
-		"dev": "poi --serve --config config/watch.js",
-		"test": "karma start"
+		"dev": "poi --serve --config config/watch.js"
 	},
 	"author": "shawroger",
 	"license": "MIT",
 	"devDependencies": {
-		"karma": "^5.0.4",
 		"poi": "^12.8.0"
 	}
 }

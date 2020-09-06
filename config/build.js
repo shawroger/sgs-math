@@ -2,7 +2,7 @@ module.exports = {
 	entry: "src/index.ts",
 	output: {
 		format: "umd",
-		moduleName: "Diycode",
+		moduleName: "sgsMath",
 		fileNames: {
 			js: "index.js",
 		},
